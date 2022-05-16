@@ -1,6 +1,7 @@
 <template>
   <div>
     <navBar />
+    <backgroundSeries />
     <series />
     <films />
     <others />

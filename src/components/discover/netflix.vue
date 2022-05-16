@@ -1,7 +1,7 @@
 <template>
   <div class="gunun-populer-dizile">
     <div class="text-span">
-      <span> Günün Popüler Dizileri </span>
+      <span> Populaires </span>
     </div>
 
     <swiper
@@ -33,13 +33,13 @@
               <a @click="addFavorite(seriesList)"
                 ><i class="fas fa-plus toolTip">
                   <span class="toolTiptext-sm tool-span-sm">
-                    Listeme ekle
+                    Ajouter a ma liste
                   </span>
                 </i></a
               >
               <i class="fas fa-chevron-down toolTip">
                 <span class="toolTiptext-sm tool-span-sm">
-                  Daha fazla bilgi
+                  Détails
                 </span>
               </i>
             </div>
