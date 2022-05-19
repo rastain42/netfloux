@@ -19,6 +19,16 @@ npm run build
 ```
 npm run lint
 ```
+## IMAGE USAGE
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+build:
+<em>use DevDockerFile to run this app with vue-cli</em>
+
+```
+docker build -f .\DockerFile -t vuejs-netfloux/app .
+```
+
+running the container
+```
+docker run -it -p 8080:80 --rm --name netfloux vuejs-netfloux/app
+```
