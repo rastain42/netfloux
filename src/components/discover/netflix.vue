@@ -94,7 +94,7 @@ export default {
   created() {
     axios
       .get(
-        "https://api.themoviedb.org/3/trending/tv/day?api_key=<//APIKEY\\>"
+        "https://api.themoviedb.org/3/trending/tv/day?api_key=b8da754884cd3ae20d385db99b95ff93"
       )
       .then((response) => {
         console.log("seriesList", response);

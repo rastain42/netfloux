@@ -28,6 +28,13 @@ const routes = [{
             import( /* webpackChunkName: "about" */ '@/views/Discover.vue')
     },
     {
+        path: '/Video',
+        name: 'Play',
+
+        component: () =>
+            import( /* webpackChunkName: "about" */ '@/views/VideoPlayer.vue')
+    },
+    {
         path: '/Search',
         name: 'Search',
 

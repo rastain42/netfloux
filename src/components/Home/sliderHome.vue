@@ -21,7 +21,7 @@
       <swiper-slide v-for="gundem in gundemList" :key="gundem.id">
         <div class="ms-2 me-2 movie_card item">
           <img
-            :src="'http://image.tmdb.org/t/p/w500/' + gundem.poster_path"
+             :src="'http://image.tmdb.org/t/p/w500/' + gundem.poster_path"
             class="card-img-top"
             alt="..."
           />
@@ -109,7 +109,7 @@ export default {
       try {
         await axios
           .get(
-            `https://api.themoviedb.org/3/movie/${gundem.id}?api_key=7b97ca5600ae944d697e04e778928d05&language=en-US&append_to_response=videos,credits,release_dates,similar`
+            `https://api.themoviedb.org/3/movie/${gundem.id}?api_key=b8da754884cd3ae20d385db99b95ff93&language=en-US&append_to_response=videos,credits,release_dates,similar`
           )
           .then((response) => {
             console.log("iddetailvideos", response);
@@ -145,7 +145,7 @@ export default {
   created() {
     axios
       .get(
-        "https://api.themoviedb.org/3/movie/popular?api_key=<//APIKEY\\>&language=en-US&page=1"
+        "https://api.themoviedb.org/3/movie/popular?api_key=b8da754884cd3ae20d385db99b95ff93&language=en-US&page=1"
       )
       .then((response) => {
         console.log("gundemList", response);

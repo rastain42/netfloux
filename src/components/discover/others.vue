@@ -94,7 +94,7 @@ export default {
   created() {
     axios
       .get(
-        "https://api.themoviedb.org/3/tv/63351/recommendations?api_key=<//APIKEY\\>&language=en-US&page=1"
+        "https://api.themoviedb.org/3/tv/63351/recommendations?api_key=b8da754884cd3ae20d385db99b95ff93&language=en-US&page=1"
       )
       .then((response) => {
         console.log("", response);

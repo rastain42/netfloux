@@ -3,7 +3,6 @@
     <navBar />
     <backgroundMovie />
     <sliderHome />
-    <sliderHomeTwo />
     <footers />
   </div>
 </template>

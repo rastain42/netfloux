@@ -38,6 +38,7 @@
             </div>
             <div class="btn-modal">
               <button
+                @click="test"
                 id="buttonPlay"
                 class="button"
                 style="width: 170px; height: 50px; font-size: 20px"
@@ -319,6 +320,9 @@ export default {
     };
   },
   methods: {
+    test() {
+      this.$router.push({ name: 'Play' })
+    },
     applyConfig() {
       this.play = Object.assign(this.play, this.temp);
     },

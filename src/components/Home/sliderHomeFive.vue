@@ -108,7 +108,7 @@ export default {
       try {
         await axios
           .get(
-            `https://api.themoviedb.org/3/movie/${dayPopular.id}?api_key=7b97ca5600ae944d697e04e778928d05&language=en-US&append_to_response=videos,credits,release_dates,similar`
+            `https://api.themoviedb.org/3/movie/${dayPopular.id}?api_key=b8da754884cd3ae20d385db99b95ff93&language=en-US&append_to_response=videos,credits,release_dates,similar`
           )
           .then((response) => {
             console.log("iddetailvideos", response);
@@ -137,7 +137,7 @@ export default {
   created() {
     axios
       .get(
-        "https://api.themoviedb.org/3/trending/movie/day?api_key=<//APIKEY\\>"
+        "https://api.themoviedb.org/3/trending/movie/day?api_key=b8da754884cd3ae20d385db99b95ff93"
       )
       .then((response) => {
         console.log("dayPopular", response);
