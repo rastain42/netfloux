@@ -321,7 +321,8 @@ export default {
   },
   methods: {
     test() {
-      this.$router.push({ name: 'Play' })
+      console.log("PROPS", this.modalData)
+      this.$router.push({ name: 'Play' , query: { id: `${this.modalData.title}` }})
     },
     applyConfig() {
       this.play = Object.assign(this.play, this.temp);

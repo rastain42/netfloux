@@ -32,7 +32,8 @@ const routes = [{
         name: 'Play',
 
         component: () =>
-            import( /* webpackChunkName: "about" */ '@/views/VideoPlayer.vue')
+            import( /* webpackChunkName: "about" */ '@/views/VideoPlayer.vue'),
+            props: route => ({ query: route.query.q })
     },
     {
         path: '/Search',
@@ -67,23 +68,9 @@ router.beforeEach((to, from, next) => {
     // local storage üzerinde user varmı?
     if (localStorage?.user) user = JSON.parse(localStorage?.user)
     // localstorage üzerinde user varsa store u güncelle
-    if (user !== null && typeof user === 'object') {
-        store.commit("users/setUser", user)
-    };
+   
     // is isAuthenticated bilgisini store üzerinden almak
-    const isAuthenticated = store.getters["users/isAuthenticated"]
-    if (isAuthenticated) store.dispatch("users/setFavorites");
-
-
-    // rules...
-    //eğer giriş yapmamışsa ve user ile ilgili bölümlere sokma login sayfasına yönlendir
-    if (!isAuthenticated && authenticatedPages.indexOf(to.name) > -1) next({
-        name: "Login"
-    });
-    if (isAuthenticated && (to.name === "Login" || to.name === "Register"))
-        next({
-            name: "Home"
-        });
+ 
 
     next();
 

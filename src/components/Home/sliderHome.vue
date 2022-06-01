@@ -149,6 +149,7 @@ export default {
       )
       .then((response) => {
         console.log("gundemList", response);
+        
         this.gundemList = response.data.results;
       });
   },

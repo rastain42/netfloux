@@ -1,35 +1,36 @@
 <template>
   <div>
+    HELLO
     <video controls class="video">
-      <source src="http://localhost:3000/api/video?video=test.mp4" type="video/mp4">
+      <source :src="videoId" type="video/mp4">
       <p>Votre navigateur ne supporte pas la vidéo HTML5. Voici à la place <a href="rabbit320.mp4">un lien vers la vidéo</a>.</p>
     </video>
   </div>
 </template>
 
-<script>
+<script> 
 import VideoPlayer from '@/components/Home/video.vue';
+import { createDecipheriv } from 'crypto';
 
 export default {
   name: 'VideoExample',
-  components: {
-    VideoPlayer
-  },
+ 
   data() {
     return {
-      videoOptions: {
-        autoplay: true,
-        controls: true,
-        sources: [
-          {
-            src:
-              './test.mp4',
-              type: 'video/mp4'
-          }
-        ]
-      }
+      videoId: '',
     };
-  }
+  },
+    methods: {
+      mounted() {
+        console.log("PARAMS", this.$route.query)
+        this.videoId = `http://yanissloisel.com/api/video?video=${this.$route.query.video}`;
+      }
+    },
+         created() {
+           console.log("PARAMS", this.$route.query)
+           this.videoId = `http://yanissloisel.com/api/video?video=${this.$route.query.id}`;
+           console.log(this.videoId);
+         },
 };
 </script>
 
